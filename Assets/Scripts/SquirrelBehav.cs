@@ -20,6 +20,15 @@ public class SquirrelBehav : MonoBehaviour
     }
 
     // Update is called once per frame
+    void FixedUpdate()
+    {       
+        if (stopped == false && inAir == false && Time.timeScale > 0)
+        {
+            //rb.velocity = (transform.right * speed);
+            rb.AddRelativeForce (speed,0,0);
+        }       
+    }
+
     void Update()
     {
         RaycastHit hit;
@@ -29,12 +38,14 @@ public class SquirrelBehav : MonoBehaviour
             oneEighty();
         }
 
-        if (stopped == false && inAir == false && Time.timeScale > 0)
+        if (Physics.Raycast(transform.position, transform.up * -1, out hit, 1.1f))
         {
-            //rb.velocity = (transform.right * speed);
-            rb.AddRelativeForce (speed,0,0);
+            inAir = false;
         }
-        
+        else
+        {
+            inAir = true;
+        }
     }
 
     public void oneEighty()
