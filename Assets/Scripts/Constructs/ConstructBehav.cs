@@ -10,7 +10,8 @@ public class ConstructBehav : MonoBehaviour
 
     public float requiredA, currentA;
 
-    public GameObject[] squirls;
+    //public GameObject[] squirls;
+    public List<GameObject> squirls = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +24,19 @@ public class ConstructBehav : MonoBehaviour
         
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<SquirrelBehav>() != null)
+        {
+            squirls.Add(other.gameObject);
+        }           
+    }
 
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<SquirrelBehav>() != null)
+        {
+            squirls.Remove(other.gameObject);
+        }
+    }
 }
