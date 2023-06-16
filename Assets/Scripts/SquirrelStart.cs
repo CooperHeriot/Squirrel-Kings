@@ -34,7 +34,7 @@ public class SquirrelStart : MonoBehaviour
 
         if (amount < 1)
         {
-
+            gameObject.SetActive(false);
         }
     }
 }
