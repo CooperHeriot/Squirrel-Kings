@@ -6,9 +6,9 @@ public class Cursor : MonoBehaviour
 {
     public Camera cam;
 
-    public GameObject stopBubble, goBubble;
+    public GameObject stopBubble, goBubble, ehBubble;
 
-    public bool stopped, gooed;
+    public bool stopped, gooed, somethinged;
 
     public GameObject marker, currentMark;
     private Vector3 bublePos;
@@ -16,12 +16,13 @@ public class Cursor : MonoBehaviour
     public Vector3 screenPos, worldPosition;
     public float dist;
 
-    private BubleBehav b1, b2;
+    private BubleBehav b1, b2, b3;
     // Start is called before the first frame update
     void Start()
     {
         b1 = stopBubble.GetComponent<BubleBehav>();
         b2 = goBubble.GetComponent<BubleBehav>();
+        b3 = ehBubble.GetComponent<BubleBehav>();
     }
 
     // Update is called once per frame
@@ -36,14 +37,14 @@ public class Cursor : MonoBehaviour
 
         bublePos = ((marker.transform.position + currentMark.transform.position) / 2);
 
-        if (Input.GetMouseButton(0) && stopped == false)
+        if (Input.GetMouseButton(0) && stopped == false && somethinged == false)
         {
             gooed = true;
         } else
         {
             gooed = false;
         }
-        if (Input.GetMouseButton(1) && gooed == false)
+        if (Input.GetMouseButton(1) && gooed == false && somethinged == false)
         {
             stopped = true;
         }
@@ -51,12 +52,24 @@ public class Cursor : MonoBehaviour
         {
             stopped = false;
         }
+        if (Input.GetMouseButton(2) && gooed == false && stopped == false)
+        {
+            somethinged = true;
+        }
+        else
+        {
+            somethinged = false;
+        }
 
-        if (Input.GetMouseButtonDown(0) && stopped == false)
+        if (Input.GetMouseButtonDown(0) && stopped == false && somethinged == false)
         {
             marker.transform.position = worldPosition;
         }
-        if (Input.GetMouseButtonDown(1) && gooed == false)
+        if (Input.GetMouseButtonDown(1) && gooed == false && somethinged == false)
+        {
+            marker.transform.position = worldPosition;
+        }
+        if (Input.GetMouseButtonDown(1) && gooed == false && stopped == false)
         {
             marker.transform.position = worldPosition;
         }
@@ -82,6 +95,17 @@ public class Cursor : MonoBehaviour
         {
             b1.activate();
             stopBubble.SetActive(false);
+        }
+        if (stopped == true)
+        {
+            ehBubble.SetActive(true);
+            ehBubble.transform.position = bublePos;
+            ehBubble.transform.localScale = new Vector3(Vector3.Distance(marker.transform.position, currentMark.transform.position), Vector3.Distance(marker.transform.position, currentMark.transform.position), transform.localScale.z);
+        }
+        else
+        {
+            b3.activate();
+            ehBubble.SetActive(false);
         }
 
     }

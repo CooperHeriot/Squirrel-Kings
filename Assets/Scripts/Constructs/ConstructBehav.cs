@@ -12,6 +12,8 @@ public class ConstructBehav : MonoBehaviour
 
     private SphereCollider SC;
     private MeshRenderer MR;
+
+    public float force;
     //public GameObject[] squirls;
     public List<GameObject> squirls = new List<GameObject>();
     // Start is called before the first frame update
@@ -51,6 +53,17 @@ public class ConstructBehav : MonoBehaviour
         }
     }
 
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.GetComponent<SquirrelBehav>() != null)
+        {
+            Rigidbody sb = other.GetComponent<Rigidbody>();
+
+            Vector3 PullRot = sb.gameObject.transform.position - transform.position;
+            sb.AddForce(PullRot * ((-force * 50)) * Time.deltaTime);
+        }
+    }
+
     public void assemble()
     {
         for (int i = 0; i < currentA; i++)
@@ -67,7 +80,8 @@ public class ConstructBehav : MonoBehaviour
     {
         for (int i = 0; i < currentA; i++)
         {
-
+            squirls[i].transform.position = Contruct.transform.position;
+            squirls[i].SetActive(true);
         }
     }
 }
