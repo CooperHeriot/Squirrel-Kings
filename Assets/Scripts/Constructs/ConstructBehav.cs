@@ -82,6 +82,10 @@ public class ConstructBehav : MonoBehaviour
         {
             squirls[i].transform.position = Contruct.transform.position;
             squirls[i].SetActive(true);
+
+            Contruct.SetActive(false);
+
+            Destroy(transform.parent.gameObject);
         }
     }
 }

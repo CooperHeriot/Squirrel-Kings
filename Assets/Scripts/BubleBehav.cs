@@ -6,7 +6,7 @@ public class BubleBehav : MonoBehaviour
 {
     public bool stopper;
 
-    public bool on;
+    public bool on, des;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,18 +24,31 @@ public class BubleBehav : MonoBehaviour
         if (other.GetComponent<SquirrelBehav>() != null)
         {
             print("dsds");
-            if (on == true)
-            {
+            
                 if (stopper == true)
                 {
                     other.GetComponent<SquirrelBehav>().Stop();
                 } else
                 {
-                    other.GetComponent<SquirrelBehav>().Go();
+                    if (des == false)
+                    {
+                        other.GetComponent<SquirrelBehav>().Go();
+                    }
+                        
                 }
-                on = false;
+                //on = false;
                 //gameObject.SetActive(false);
-            }
+            
+        }
+        if (other.GetComponent<DisassembleContrsuct>() != null)
+        {
+           
+                if (des == true)
+                {
+                    other.GetComponent<DisassembleContrsuct>().dessemble();
+                }
+            
+            //on = false;
         }
     }
 

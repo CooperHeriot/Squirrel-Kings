@@ -18,7 +18,12 @@ public class DisassembleContrsuct : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
+    {
+        Controller.GetComponent<ConstructBehav>().dissasemble();
+    }*/
+
+    public void dessemble()
     {
         Controller.GetComponent<ConstructBehav>().dissasemble();
     }

@@ -69,7 +69,7 @@ public class Cursor : MonoBehaviour
         {
             marker.transform.position = worldPosition;
         }
-        if (Input.GetMouseButtonDown(1) && gooed == false && stopped == false)
+        if (Input.GetMouseButtonDown(2) && gooed == false && stopped == false)
         {
             marker.transform.position = worldPosition;
         }
@@ -96,7 +96,7 @@ public class Cursor : MonoBehaviour
             b1.activate();
             stopBubble.SetActive(false);
         }
-        if (stopped == true)
+        if (somethinged == true)
         {
             ehBubble.SetActive(true);
             ehBubble.transform.position = bublePos;
