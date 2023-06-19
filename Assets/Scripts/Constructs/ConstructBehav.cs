@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ConstructBehav : MonoBehaviour
 {
-    public GameObject Contruct;
+    public GameObject Contruct, spawnPoint;
 
     public bool isActive;
 
@@ -80,10 +80,12 @@ public class ConstructBehav : MonoBehaviour
     {
         for (int i = 0; i < currentA; i++)
         {
-            squirls[i].transform.position = Contruct.transform.position;
+            squirls[i].transform.position = spawnPoint.transform.position;
             squirls[i].SetActive(true);
 
             Contruct.SetActive(false);
+
+            Destroy(spawnPoint.transform.parent.gameObject);
 
             Destroy(transform.parent.gameObject);
         }

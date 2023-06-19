@@ -17,6 +17,8 @@ public class Cursor : MonoBehaviour
     public float dist;
 
     private BubleBehav b1, b2, b3;
+
+    public GameObject currentConsuct;
     // Start is called before the first frame update
     void Start()
     {
