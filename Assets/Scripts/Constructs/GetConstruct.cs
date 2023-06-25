@@ -10,7 +10,8 @@ public class GetConstruct : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CC = FindObjectOfType<Cursor>();   
+        // CC = FindObjectOfType<Cursor>();   
+        CC = GameObject.Find("player").GetComponent<Cursor>();
     }
 
     // Update is called once per frame
@@ -21,6 +22,8 @@ public class GetConstruct : MonoBehaviour
 
     public void GetConsuct()
     {
-        CC.currentConsuct = Construct;
+        // CC.currentConsuct = Construct;
+
+        CC.newConstruct(Construct);
     }
 }
