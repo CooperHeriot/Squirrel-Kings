@@ -7,6 +7,7 @@ public class Pause : MonoBehaviour
 {
     public GameObject panel;
     public bool paused;
+    public string sceneToLoad;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +45,11 @@ public class Pause : MonoBehaviour
             panel.SetActive(false);
             Time.timeScale = 1;
         }
+    }
+
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(sceneToLoad);
     }
 
     public void reset()
