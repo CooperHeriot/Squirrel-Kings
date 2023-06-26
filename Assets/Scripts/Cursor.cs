@@ -132,6 +132,12 @@ public class Cursor : MonoBehaviour
                 moveObj = null;
                 Carrying = false;
             }
+            if (Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
+            {
+                Destroy(moveObj);
+                moveObj = null;
+                Carrying = false;
+            }
         }
         
 

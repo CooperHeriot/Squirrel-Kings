@@ -32,8 +32,10 @@ public class ConstructBehav : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<SquirrelBehav>() != null)
+        if (other.GetComponent<SquirrelBehav>() != null && other.GetComponent<SquirrelBehav>().inContruct == false)
         {
+            other.GetComponent<SquirrelBehav>().inContruct = true;
+
             squirls.Add(other.gameObject);
             currentA += 1;
 
@@ -46,8 +48,9 @@ public class ConstructBehav : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent<SquirrelBehav>() != null)
+        if (other.GetComponent<SquirrelBehav>() != null && other.GetComponent<SquirrelBehav>().inContruct == false)
         {
+            other.GetComponent<SquirrelBehav>().inContruct = false;
             squirls.Remove(other.gameObject);
             currentA -= 1;
         }
@@ -82,6 +85,7 @@ public class ConstructBehav : MonoBehaviour
         {
             squirls[i].transform.position = spawnPoint.transform.position;
             squirls[i].SetActive(true);
+            squirls[i].GetComponent<SquirrelBehav>().inContruct = false;
 
             Contruct.SetActive(false);
 

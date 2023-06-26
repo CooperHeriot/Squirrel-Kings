@@ -8,12 +8,17 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxSquirrls = GameObject.FindObjectsOfType<SquirrelBehav>().Length;
+       // maxSquirrls = GameObject.FindObjectsOfType<SquirrelBehav>().Length;
     }
 
     // Update is called once per frame
     void Update()
     {
         currentSquirls = GameObject.FindObjectsOfType<SquirrelBehav>().Length;
+    }
+
+    public void UpdateMax()
+    {
+        maxSquirrls += 1;
     }
 }

@@ -12,6 +12,13 @@ public class SquirrelStart : MonoBehaviour
     void Start()
     {
         tt = timer;
+
+        for (int i = 0; i < amount; i++)
+        {
+            GameObject.Find("GameManger").GetComponent<GameManager>().UpdateMax();
+        }
+
+        //GameObject.Find("GameManger").GetComponent<GameManager>().UpdateMax();
     }
 
     // Update is called once per frame
@@ -30,6 +37,7 @@ public class SquirrelStart : MonoBehaviour
             Instantiate(Suirrel, transform.position, transform.rotation);
             amount -= 1;
             timer = tt;
+            
         }
 
         if (amount < 1)

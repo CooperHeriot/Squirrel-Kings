@@ -13,6 +13,8 @@ public class SquirrelBehav : MonoBehaviour
     private Rigidbody rb;
 
     public LayerMask LM;
+
+    public bool inContruct;
     // Start is called before the first frame update
     void Start()
     {
