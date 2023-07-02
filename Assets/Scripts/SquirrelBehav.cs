@@ -27,7 +27,7 @@ public class SquirrelBehav : MonoBehaviour
         if (stopped == false && inAir == false && Time.timeScale > 0)
         {
             //rb.velocity = (transform.right * speed);
-            rb.AddRelativeForce (speed,0,0);
+            rb.AddRelativeForce (speed,0,0, ForceMode.Acceleration);
         }       
     }
 
@@ -40,13 +40,15 @@ public class SquirrelBehav : MonoBehaviour
             oneEighty();
         }
 
-        if (Physics.Raycast(transform.position, transform.up * -1, out hit, 1.1f))
+        if (Physics.Raycast(transform.position, transform.up * -1, out hit, 1.3f))
         {
             inAir = false;
+            rb.useGravity = false;
         }
         else
         {
             inAir = true;
+            rb.useGravity = true;
         }
     }
 
@@ -68,5 +70,10 @@ public class SquirrelBehav : MonoBehaviour
     public void toggleStop()
     {
         stopped = !stopped;
+    }
+
+    public void die()
+    {
+        Destroy(gameObject);
     }
 }

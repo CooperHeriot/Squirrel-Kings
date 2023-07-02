@@ -20,7 +20,7 @@ public class CamMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
        // speed = speed / 100;
 
