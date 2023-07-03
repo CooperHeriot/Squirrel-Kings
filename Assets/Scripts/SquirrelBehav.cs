@@ -15,6 +15,8 @@ public class SquirrelBehav : MonoBehaviour
     public LayerMask LM;
 
     public bool inContruct;
+
+    private bool iWin;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +42,7 @@ public class SquirrelBehav : MonoBehaviour
             oneEighty();
         }
 
-        if (Physics.Raycast(transform.position, transform.up * -1, out hit, 1.3f))
+        if (Physics.Raycast(transform.position, transform.up * -1, out hit, 1.3f, LM))
         {
             inAir = false;
             rb.useGravity = false;
@@ -72,8 +74,17 @@ public class SquirrelBehav : MonoBehaviour
         stopped = !stopped;
     }
 
+    public void sleepy()
+    {
+        speed = 0;
+        iWin = true;
+    }
     public void die()
     {
-        Destroy(gameObject);
+        if (iWin == false)
+        {
+            Destroy(gameObject);
+        }
+        
     }
 }

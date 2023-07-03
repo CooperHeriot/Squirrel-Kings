@@ -8,6 +8,8 @@ public class SquirrelStart : MonoBehaviour
     public float amount;
     public float timer;
     private float tt;
+
+    public float offset = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +36,8 @@ public class SquirrelStart : MonoBehaviour
                  timer = tt;
              }
              */
-            Instantiate(Suirrel, transform.position, transform.rotation);
+           // Instantiate(Suirrel, transform.position, transform.rotation);
+            Instantiate(Suirrel, new Vector3(transform.position.x + Random.Range(-offset, offset), transform.position.y + Random.Range(-offset, offset), transform.position.z), transform.rotation);
             amount -= 1;
             timer = tt;
             
