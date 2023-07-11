@@ -416,5 +416,5 @@ MonoBehaviour:
   inAir: 0
   LM:
     serializedVersion: 2
-    m_Bits: 51
+    m_Bits: 19
   inContruct: 0

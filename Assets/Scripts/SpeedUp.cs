@@ -11,12 +11,16 @@ public class SpeedUp : MonoBehaviour
     public bool spedUp;
 
     public GameObject icon;
+
+    private Pause PS;
     // Start is called before the first frame update
     void Start()
     {
         baseSpeed = Time.timeScale;
 
         icon.SetActive(false);
+
+        PS = GameObject.FindObjectOfType<Pause>();
     }
 
     // Update is called once per frame
@@ -30,14 +34,18 @@ public class SpeedUp : MonoBehaviour
             spedUp = false;
         }
 
-        if (spedUp == true)
+        if (PS.paused == false)
         {
-            Time.timeScale = Speed;
-            icon.SetActive(true);
-        } else
-        {
-            Time.timeScale = baseSpeed;
-            icon.SetActive(false);
-        }
+            if (spedUp == true)
+            {
+                Time.timeScale = Speed;
+                icon.SetActive(true);
+            }
+            else
+            {
+                Time.timeScale = baseSpeed;
+                icon.SetActive(false);
+            }
+        }   
     }
 }
