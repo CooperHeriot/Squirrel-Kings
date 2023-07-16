@@ -93,5 +93,14 @@ public class ConstructBehav : MonoBehaviour
 
             Destroy(transform.parent.gameObject);
         }
+
+        if (currentA == 0)
+        {
+            Contruct.SetActive(false);
+
+            Destroy(spawnPoint.transform.parent.gameObject);
+
+            Destroy(transform.parent.gameObject);
+        }
     }
 }
