@@ -40,9 +40,11 @@ public class Cursor : MonoBehaviour
 
         currentMark.transform.position = worldPosition;
 
-        bublePos = ((marker.transform.position + currentMark.transform.position) / 2);
+       // bublePos = ((marker.transform.position + currentMark.transform.position) / 2);
         if (Carrying == false)
         {
+            bublePos = ((marker.transform.position + currentMark.transform.position) / 2);
+
             if (Input.GetMouseButton(0) && stopped == false && somethinged == false)
             {
                 gooed = true;
@@ -118,6 +120,8 @@ public class Cursor : MonoBehaviour
 
         } else
         {
+            bublePos = currentMark.transform.position;
+
             if (got == true)
             {
                 moveObj = Instantiate(currentConsuct, transform.position, transform.rotation);

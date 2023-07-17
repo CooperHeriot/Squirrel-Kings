@@ -10,12 +10,16 @@ public class SquirrelPushAway : MonoBehaviour
     {
         if (other.GetComponentInParent<SquirrelBehav>() != null)
         {
-            Rigidbody sb = other.gameObject.GetComponentInParent<Rigidbody>();
+            if (other.GetComponentInParent<SquirrelBehav>().stopped == false)
+            {
+                Rigidbody sb = other.gameObject.GetComponentInParent<Rigidbody>();
 
-            //print("fsdjsdnj")
+                //print("fsdjsdnj")
 
-            Vector3 PullRot = sb.gameObject.transform.position - transform.position;
-            sb.AddForce(PullRot * ((force * 50)) * Time.deltaTime);
+                Vector3 PullRot = sb.gameObject.transform.position - transform.position;
+                sb.AddForce(PullRot * ((force * 50)) * Time.deltaTime);
+            }
+
         }
     }
 }

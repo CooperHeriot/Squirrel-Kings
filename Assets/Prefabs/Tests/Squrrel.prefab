@@ -418,3 +418,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 19
   inContruct: 0
+  guts: {fileID: 4214414169575226919, guid: c4c743bec005dc64fbc45ea28792cf32, type: 3}

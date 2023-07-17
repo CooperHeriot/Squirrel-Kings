@@ -17,6 +17,8 @@ public class SquirrelBehav : MonoBehaviour
     public bool inContruct;
 
     private bool iWin;
+
+    public GameObject guts;
     // Start is called before the first frame update
     void Start()
     {
@@ -84,6 +86,7 @@ public class SquirrelBehav : MonoBehaviour
         if (iWin == false)
         {
             Destroy(gameObject);
+            Instantiate(guts, transform.position, transform.rotation);
         }
         
     }

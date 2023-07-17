@@ -64,6 +64,8 @@ public class ConstructBehav : MonoBehaviour
 
             Vector3 PullRot = sb.gameObject.transform.position - transform.position;
             sb.AddForce(PullRot * ((-force * 50)) * Time.deltaTime);
+
+            //.AddForce(other.gameObject.transform.position - transform.position; * ((-force * 50)) * Time.deltaTime);
         }
     }
 

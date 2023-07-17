@@ -16,7 +16,8 @@ public class SpeedUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        baseSpeed = Time.timeScale;
+       // baseSpeed = Time.timeScale;
+        baseSpeed = 1;
 
         icon.SetActive(false);
 

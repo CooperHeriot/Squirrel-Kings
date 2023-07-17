@@ -29,6 +29,7 @@ public class Menu : MonoBehaviour
 
     public void Reset()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
