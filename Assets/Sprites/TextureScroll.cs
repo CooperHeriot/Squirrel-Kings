@@ -22,7 +22,7 @@ public class TextureScroll : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         /* float offX = Dir.x;
          float offY = Dir.y; */

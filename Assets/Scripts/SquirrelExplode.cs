@@ -10,7 +10,12 @@ public class SquirrelExplode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       // transform.rotation = 
+        //transform.rotation = Random.rotation;
+
+       /* for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).transform.position = new Vector3(transform.position.x + Random.Range(-1, 1), transform.position.y + Random.Range(-1, 1), transform.position.z);
+        }*/
     }
 
     // Update is called once per frame
@@ -20,7 +25,8 @@ public class SquirrelExplode : MonoBehaviour
 
         if (timer <= 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
         }
     }
 
@@ -29,6 +35,7 @@ public class SquirrelExplode : MonoBehaviour
         if (other.gameObject.layer == 11)
         {
             other.GetComponent<Rigidbody>().AddForce(other.gameObject.transform.position - transform.position *((-Blast * 50)) * Time.deltaTime);
+            //other.GetComponent<Rigidbody>().AddForce(0,700,0 * Time.deltaTime);
         }
     }
 }

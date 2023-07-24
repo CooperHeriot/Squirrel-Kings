@@ -4,22 +4,32 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public float currentSquirls, maxSquirrls;
+    public float currentSquirls, maxSquirrls, NA;
 
     public GameObject win, lose;
     private bool won, lost;
+
+    public bool p2;
     // Start is called before the first frame update
     void Start()
     {
         // maxSquirrls = GameObject.FindObjectsOfType<SquirrelBehav>().Length;
         lose.SetActive(false);
         win.SetActive(false);
+
+        NA = GameObject.Find("Goal").GetComponent<Goal>().amountN;
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentSquirls = GameObject.FindObjectsOfType<SquirrelBehav>().Length;
+        //currentSquirls = GameObject.FindObjectsOfType<SquirrelBehav>().Length;
+        //currentSquirls
+
+        if (currentSquirls < NA && p2 == true)
+        {
+            Lose();
+        }
     }
 
     public void UpdateMax()

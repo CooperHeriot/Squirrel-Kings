@@ -18,11 +18,13 @@ public class SquirrelBehav : MonoBehaviour
 
     private bool iWin;
 
-    public GameObject guts;
+    public GameObject guts, tracker, t2;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        t2 = Instantiate(tracker);
     }
 
     // Update is called once per frame
@@ -85,9 +87,16 @@ public class SquirrelBehav : MonoBehaviour
     {
         if (iWin == false)
         {
+            t2.GetComponent<SQuirrelCount>().death();
+            Destroy(t2);
             Destroy(gameObject);
             Instantiate(guts, transform.position, transform.rotation);
         }
         
+    }
+
+    public void stuck()
+    {
+        t2.GetComponent<SQuirrelCount>().death();
     }
 }

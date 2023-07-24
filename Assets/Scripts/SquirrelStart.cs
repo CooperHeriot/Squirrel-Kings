@@ -10,6 +10,8 @@ public class SquirrelStart : MonoBehaviour
     private float tt;
 
     public float offset = 1;
+
+    //public bool done = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +47,8 @@ public class SquirrelStart : MonoBehaviour
 
         if (amount < 1)
         {
+            GameObject.Find("GameManger").GetComponent<GameManager>().p2 = true;
+
             gameObject.SetActive(false);
         }
     }
