@@ -54,7 +54,14 @@ public class SquirrelBehav : MonoBehaviour
         else
         {
             inAir = true;
-            rb.useGravity = true;
+            if (inContruct == false)
+            {
+                rb.useGravity = true;
+            } else
+            {
+                rb.useGravity = false;
+            }
+           
         }
     }
 

@@ -6,7 +6,7 @@ public class SquirrelExplode : MonoBehaviour
 {
     public float Blast;
 
-    private float timer = 1;
+    private float timer = 1.5f;
     // Start is called before the first frame update
     void Start()
     {
