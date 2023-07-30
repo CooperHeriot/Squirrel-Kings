@@ -131,13 +131,13 @@ TextureImporter:
       name: Sign
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
+        x: 0
+        y: 1
         width: 1096
         height: 1048
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 302, y: 277, z: 328, w: 286}
       outline: []
       physicsShape: []
       tessellationDetail: 0
