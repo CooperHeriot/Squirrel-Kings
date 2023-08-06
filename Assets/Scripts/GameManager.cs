@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     private bool won, lost;
 
     public bool p2;
+
+    public GameObject test;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,8 @@ public class GameManager : MonoBehaviour
         lose.SetActive(false);
         win.SetActive(false);
 
+
+        test = GameObject.Find("Goal");
         NA = GameObject.Find("Goal").GetComponent<Goal>().amountN;
     }
 

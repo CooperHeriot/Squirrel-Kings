@@ -13593,6 +13593,7 @@ MonoBehaviour:
   win: {fileID: 955754853}
   lose: {fileID: 783550876}
   p2: 0
+  test: {fileID: 0}
 --- !u!1 &1620230332
 GameObject:
   m_ObjectHideFlags: 0
@@ -27139,7 +27140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2059991774
 Transform:
   m_ObjectHideFlags: 0
