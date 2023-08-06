@@ -10,7 +10,7 @@ public class SquirrelPushAway : MonoBehaviour
     {
         if (other.GetComponentInParent<SquirrelBehav>() != null)
         {
-            if (other.GetComponentInParent<SquirrelBehav>().stopped == false)
+            if (other.GetComponentInParent<SquirrelBehav>().stopped == false && transform.GetComponentInParent<SquirrelBehav>().stopped == false)
             {
                 Rigidbody sb = other.gameObject.GetComponentInParent<Rigidbody>();
 
