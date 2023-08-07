@@ -8,6 +8,7 @@ public class CamMove : MonoBehaviour
     public float speed;
     private float speed2;
     private float speed3;
+    public float zDist, zLock;
 
     public Vector2 bounds;
 
@@ -43,5 +44,16 @@ public class CamMove : MonoBehaviour
 
         transform.position = tanfom;
 
+
+        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        {
+            zDist += 1;
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        {
+            zDist -= 1;
+        }
+
+        zDist = Mathf.Clamp(zDist, -zLock, zLock);
     }
 }

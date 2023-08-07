@@ -36,5 +36,6 @@ public class Menu : MonoBehaviour
     public void MenuLoad()
     {
         SceneManager.LoadScene("TItle");
+        Time.timeScale = 1.0f;
     }
 }
