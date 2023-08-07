@@ -70,8 +70,9 @@ public class CamMove : MonoBehaviour
 
         zDist = Mathf.Clamp(zDist, -zLock, zLock);
 
-        Camm.orthographicSize = (zed + zDist);
+        Camm.orthographicSize = Mathf.Lerp(Camm.orthographicSize , zed + zDist, 5 * Time.deltaTime);
 
-        background.transform.localScale = new Vector3(bak.x + (zDist * 0.1f), bak.y + (zDist * 0.1f), bak.z + (zDist * 0.1f));
+        //background.transform.localScale = new Vector3(bak.x + (zDist * 0.1f), bak.y + (zDist * 0.1f), bak.z + (zDist * 0.1f));
+        background.transform.localScale = Vector3.Slerp(background.transform.localScale, new Vector3(bak.x + (zDist * 0.1f), bak.y + (zDist * 0.1f), bak.z + (zDist * 0.1f)), 5 * Time.deltaTime);
     }
 }
