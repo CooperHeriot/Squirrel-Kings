@@ -8,16 +8,30 @@ public class CamMove : MonoBehaviour
     public float speed;
     private float speed2;
     private float speed3;
-    public float zDist, zLock;
+    public float zDist, zLock = 2;
 
     public Vector2 bounds;
 
     private Vector3 tanfom;
+    private float zed;
+
+    private Camera Camm;
+
+    public GameObject background;
+    private Vector3 bak;
     // Start is called before the first frame update
     void Start()
     {
         speed = speed / 100;
         speed2 = speed * 3;
+
+        Camm = GetComponent<Camera>();
+        //zed = transform.position.z;
+        zed = Camm.orthographicSize;
+
+        //background = GetComponentInChildren<GameObject>();
+        background = GameObject.Find("Background");
+        bak = background.transform.localScale;       
     }
 
     // Update is called once per frame
@@ -47,13 +61,17 @@ public class CamMove : MonoBehaviour
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
-            zDist += 1;
+            zDist -= 1;
         }
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
-            zDist -= 1;
+            zDist += 1;
         }
 
         zDist = Mathf.Clamp(zDist, -zLock, zLock);
+
+        Camm.orthographicSize = (zed + zDist);
+
+        background.transform.localScale = new Vector3(bak.x + (zDist * 0.1f), bak.y + (zDist * 0.1f), bak.z + (zDist * 0.1f));
     }
 }
