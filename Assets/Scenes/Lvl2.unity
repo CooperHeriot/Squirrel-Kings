@@ -9954,6 +9954,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 12
+  zDist: 0
+  zLock: 0
   bounds: {x: 35, y: 0}
 --- !u!1 &965165633
 GameObject:
@@ -27140,7 +27142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2059991774
 Transform:
   m_ObjectHideFlags: 0
