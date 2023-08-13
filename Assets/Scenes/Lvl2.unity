@@ -1521,7 +1521,7 @@ MonoBehaviour:
   Suirrel: {fileID: 9089793851743094517, guid: 888f5ef80ea561a4ebdee26c833f8fd3, type: 3}
   amount: 11
   timer: 4
-  offset: 1
+  offset: 0.7
 --- !u!4 &325855382
 Transform:
   m_ObjectHideFlags: 0
@@ -1530,7 +1530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325855380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.61, y: 0.85, z: -0.41}
+  m_LocalPosition: {x: -8.5, y: 0.89, z: -0.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

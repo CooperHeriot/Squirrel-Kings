@@ -18,18 +18,22 @@ public class SquirrelBehav : MonoBehaviour
 
     private bool iWin;
 
-    public GameObject guts, tracker, t2, icon;
+    public GameObject guts, tracker, t2;
 
     // public Animator anim;
     public GameObject idle, run;
     public bool swit;
-
+    public ParticleSystem PS, AA;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
 
+        PS = GetComponent<ParticleSystem>();
+
         t2 = Instantiate(tracker);
+
+        AA.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -91,11 +95,13 @@ public class SquirrelBehav : MonoBehaviour
     {
         run.SetActive(true);
         idle.SetActive(false);
+        PS.Play();
     }
     public void idleAnim()
     {
         run.SetActive(false);
         idle.SetActive(true);
+        PS.Play();
     }
 
 
@@ -123,6 +129,11 @@ public class SquirrelBehav : MonoBehaviour
     {
         speed = 0;
         iWin = true;
+
+        idleAnim();
+        //AA.Play();
+        AA.gameObject.SetActive(true);
+        print("wah");
     }
     public void die()
     {
