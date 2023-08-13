@@ -18,7 +18,10 @@ public class SquirrelBehav : MonoBehaviour
 
     private bool iWin;
 
-    public GameObject guts, tracker, t2;
+    public GameObject guts, tracker, t2, icon;
+
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
