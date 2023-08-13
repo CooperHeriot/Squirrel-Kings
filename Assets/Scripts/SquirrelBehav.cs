@@ -20,7 +20,9 @@ public class SquirrelBehav : MonoBehaviour
 
     public GameObject guts, tracker, t2, icon;
 
-    public Animator anim;
+    // public Animator anim;
+    public GameObject idle, run;
+    public bool swit;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +39,14 @@ public class SquirrelBehav : MonoBehaviour
         {
             //rb.velocity = (transform.right * speed);
             rb.AddRelativeForce (speed,0,0, ForceMode.Acceleration);
-        }       
+
+           // run.SetActive(true);
+           // idle.SetActive(false);
+        } else
+        {
+          //  run.SetActive(false);
+          //  idle.SetActive(true);
+        }     
     }
 
     void Update()
@@ -66,7 +75,29 @@ public class SquirrelBehav : MonoBehaviour
             }
            
         }
+
+        if (stopped == true && swit == false)
+        {
+            idleAnim();
+            swit = true;
+        }
+        if (stopped == false && swit == true)
+        {
+            runAnim();
+            swit = false;
+        }
     }
+    public void runAnim()
+    {
+        run.SetActive(true);
+        idle.SetActive(false);
+    }
+    public void idleAnim()
+    {
+        run.SetActive(false);
+        idle.SetActive(true);
+    }
+
 
     public void oneEighty()
     {
