@@ -139,7 +139,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -202,7 +202,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 13
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -700,7 +700,7 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: -1.02, z: 0}
+    m_Position: {x: 0, y: -1.51, z: 0}
     m_Rotation: {x: -90, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
@@ -5450,7 +5450,7 @@ Rigidbody:
   m_GameObject: {fileID: 9089793851743094517}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 1.7
+  m_Drag: 2
   m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -5469,7 +5469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d3e79a6d654ca4ab4136b07cef8bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 8
   currentRot: 0
   stopped: 0
   inAir: 0
@@ -5480,6 +5480,7 @@ MonoBehaviour:
   guts: {fileID: 4214414169575226919, guid: c4c743bec005dc64fbc45ea28792cf32, type: 3}
   tracker: {fileID: 1364821312222274133, guid: ded5bf38d0991124a93d34a8e8511f42, type: 3}
   t2: {fileID: 0}
+  sprites: {fileID: 3058660331825623906}
   idle: {fileID: 7943180397134806375}
   run: {fileID: 8418966105537673842}
   swit: 1

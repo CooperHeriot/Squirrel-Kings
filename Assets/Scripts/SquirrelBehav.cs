@@ -20,8 +20,9 @@ public class SquirrelBehav : MonoBehaviour
 
     public GameObject guts, tracker, t2;
 
+    private Quaternion slopeRotation;
     // public Animator anim;
-    public GameObject idle, run;
+    public GameObject sprites, idle, run;
     public bool swit;
     public ParticleSystem PS, AA;
     // Start is called before the first frame update
@@ -62,10 +63,16 @@ public class SquirrelBehav : MonoBehaviour
             oneEighty();
         }
 
-        if (Physics.Raycast(transform.position, transform.up * -1, out hit, 1.3f, LM))
+        if (Physics.Raycast(transform.position, transform.up * -1, out hit, 1.4f, LM))
         {
             inAir = false;
             rb.useGravity = false;
+
+            //transform.rotation = Quaternion.LookRotation(hit.normal);
+            //transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y, Quaternion.LookRotation(hit.normal).z, 0);
+            //transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y, Quaternion.FromToRotation(transform.up, hit.normal).z, 0);
+            slopeRotation = Quaternion.FromToRotation(transform.up, hit.normal);
+            sprites.transform.rotation = Quaternion.Slerp(sprites.transform.rotation, slopeRotation * transform.rotation, 100 * Time.deltaTime);
         }
         else
         {
@@ -77,6 +84,8 @@ public class SquirrelBehav : MonoBehaviour
             {
                 rb.useGravity = false;
             }
+
+            sprites.transform.rotation = new Quaternion(sprites.transform.rotation.x, sprites.transform.rotation.y, 0,0);
            
         }
 

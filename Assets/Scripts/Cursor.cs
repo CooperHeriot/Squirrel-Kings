@@ -22,6 +22,8 @@ public class Cursor : MonoBehaviour
     private GameObject moveObj;
     public bool Carrying;
     private bool got;
+
+    private bool noBubl, mBuble;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,30 +47,33 @@ public class Cursor : MonoBehaviour
         {
             bublePos = ((marker.transform.position + currentMark.transform.position) / 2);
 
-            if (Input.GetMouseButton(0) && stopped == false && somethinged == false)
-            {
-                gooed = true;
-            }
-            else
-            {
-                gooed = false;
-            }
-            if (Input.GetMouseButton(1) && gooed == false && somethinged == false)
-            {
-                stopped = true;
-            }
-            else
-            {
-                stopped = false;
-            }
-            if (Input.GetMouseButton(2) && gooed == false && stopped == false)
-            {
-                somethinged = true;
-            }
-            else
-            {
-                somethinged = false;
-            }
+            
+        if (Input.GetMouseButton(0) && stopped == false && somethinged == false)
+        {
+            gooed = true;
+        }
+        else
+        {
+            gooed = false;
+        }
+        if (Input.GetMouseButton(1) && gooed == false && somethinged == false)
+        {
+           stopped = true;
+        }
+        else
+        {
+           stopped = false;
+        }
+        if (Input.GetMouseButton(2) && gooed == false && stopped == false)
+        {
+           somethinged = true;
+        }
+        else
+        {
+           somethinged = false;
+        }
+            
+            
 
             if (Input.GetMouseButtonDown(0) && stopped == false && somethinged == false)
             {
@@ -84,39 +89,43 @@ public class Cursor : MonoBehaviour
             }
 
 
-            if (gooed == true)
+            if (noBubl == false)
             {
-                goBubble.SetActive(true);
-                goBubble.transform.position = bublePos;
-                goBubble.transform.localScale = new Vector3(Vector3.Distance(marker.transform.position, currentMark.transform.position), Vector3.Distance(marker.transform.position, currentMark.transform.position), transform.localScale.z);
+                if (gooed == true)
+                {
+                    goBubble.SetActive(true);
+                    goBubble.transform.position = bublePos;
+                    goBubble.transform.localScale = new Vector3(Vector3.Distance(marker.transform.position, currentMark.transform.position), Vector3.Distance(marker.transform.position, currentMark.transform.position), transform.localScale.z);
+                }
+                else
+                {
+                    b2.activate();
+                    goBubble.SetActive(false);
+                }
+                if (stopped == true)
+                {
+                    stopBubble.SetActive(true);
+                    stopBubble.transform.position = bublePos;
+                    stopBubble.transform.localScale = new Vector3(Vector3.Distance(marker.transform.position, currentMark.transform.position), Vector3.Distance(marker.transform.position, currentMark.transform.position), transform.localScale.z);
+                }
+                else
+                {
+                    b1.activate();
+                    stopBubble.SetActive(false);
+                }
+                if (somethinged == true)
+                {
+                    ehBubble.SetActive(true);
+                    ehBubble.transform.position = bublePos;
+                    ehBubble.transform.localScale = new Vector3(Vector3.Distance(marker.transform.position, currentMark.transform.position), Vector3.Distance(marker.transform.position, currentMark.transform.position), transform.localScale.z);
+                }
+                else
+                {
+                    b3.activate();
+                    ehBubble.SetActive(false);
+                }
             }
-            else
-            {
-                b2.activate();
-                goBubble.SetActive(false);
-            }
-            if (stopped == true)
-            {
-                stopBubble.SetActive(true);
-                stopBubble.transform.position = bublePos;
-                stopBubble.transform.localScale = new Vector3(Vector3.Distance(marker.transform.position, currentMark.transform.position), Vector3.Distance(marker.transform.position, currentMark.transform.position), transform.localScale.z);
-            }
-            else
-            {
-                b1.activate();
-                stopBubble.SetActive(false);
-            }
-            if (somethinged == true)
-            {
-                ehBubble.SetActive(true);
-                ehBubble.transform.position = bublePos;
-                ehBubble.transform.localScale = new Vector3(Vector3.Distance(marker.transform.position, currentMark.transform.position), Vector3.Distance(marker.transform.position, currentMark.transform.position), transform.localScale.z);
-            }
-            else
-            {
-                b3.activate();
-                ehBubble.SetActive(false);
-            }
+            
 
         } else
         {
@@ -127,6 +136,7 @@ public class Cursor : MonoBehaviour
                 moveObj = Instantiate(currentConsuct, transform.position, transform.rotation);
                 
                 got = false;
+                noBubl = true;
             }
             moveObj.transform.position = currentMark.transform.position;
 
@@ -135,12 +145,23 @@ public class Cursor : MonoBehaviour
                 moveObj.GetComponent<SetupConstruct>().activate();
                 moveObj = null;
                 Carrying = false;
+                mBuble = true;
             }
             if (Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
             {
                 Destroy(moveObj);
                 moveObj = null;
                 Carrying = false;
+                mBuble = true;
+            }
+        }
+
+        if (mBuble == true)
+        {
+            if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1) || Input.GetMouseButtonUp(2))
+            {
+                noBubl = false;
+                mBuble = false;
             }
         }
         
