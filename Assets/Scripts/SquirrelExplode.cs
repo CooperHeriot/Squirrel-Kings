@@ -34,7 +34,7 @@ public class SquirrelExplode : MonoBehaviour
     {
         if (other.gameObject.layer == 11)
         {
-            other.GetComponent<Rigidbody>().AddForce(other.gameObject.transform.position - transform.position *((-Blast * 50)) * Time.deltaTime);
+            other.GetComponent<Rigidbody>().AddForce(other.gameObject.transform.position - transform.position *((-Blast * 50)) * Time.deltaTime, ForceMode.VelocityChange);
             //other.GetComponent<Rigidbody>().AddForce(0,700,0 * Time.deltaTime);
         }
     }

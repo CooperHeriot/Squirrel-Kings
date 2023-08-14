@@ -110,7 +110,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173671656625089812}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.5
   m_Drag: 0.1
   m_AngularDrag: 2
   m_UseGravity: 1
@@ -5019,7 +5019,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277830616574535937}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.5
   m_Drag: 0.1
   m_AngularDrag: 2
   m_UseGravity: 1
@@ -10620,7 +10620,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 5000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -14942,7 +14942,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4214414170197142639}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.5
   m_Drag: 0.1
   m_AngularDrag: 2
   m_UseGravity: 1
@@ -19855,7 +19855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0da63d9cf8ce23439e76f692175bd75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Blast: 70
+  Blast: 0.7
 --- !u!1 &6178603084961838234
 GameObject:
   m_ObjectHideFlags: 0

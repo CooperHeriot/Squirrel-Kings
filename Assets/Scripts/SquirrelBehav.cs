@@ -63,7 +63,7 @@ public class SquirrelBehav : MonoBehaviour
             oneEighty();
         }
 
-        if (Physics.Raycast(transform.position, transform.up * -1, out hit, 1.4f, LM))
+        if (Physics.Raycast(transform.position, transform.up * -1, out hit, 1.3f, LM))
         {
             inAir = false;
             rb.useGravity = false;
