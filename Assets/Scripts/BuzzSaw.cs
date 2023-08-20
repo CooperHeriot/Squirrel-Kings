@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BuzzSaw : MonoBehaviour
 {
+    public GameObject noBlood, blood;
+    public AudioSource aud;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,11 @@ public class BuzzSaw : MonoBehaviour
             if ((other.GetComponent<SquirrelBehav>().inContruct == false))
             {
                 other.GetComponent<SquirrelBehav>().die();
+
+                noBlood.SetActive(false);
+                blood.SetActive(true);
+
+                aud.Play();
             }
         }
 
