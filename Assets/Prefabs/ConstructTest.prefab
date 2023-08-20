@@ -420,7 +420,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5227571867175752784}
   - component: {fileID: 6077100000002014446}
-  - component: {fileID: 1012435476861304156}
   m_Layer: 0
   m_Name: ConstructTest
   m_TagString: Untagged
@@ -462,17 +461,6 @@ MonoBehaviour:
   text: {fileID: 5227571867392564958}
   hitbox: {fileID: 5227571867660017043}
   preview: {fileID: 6790737464363886805}
---- !u!210 &1012435476861304156
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5227571867175752751}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
 --- !u!1 &5227571867267172769
 GameObject:
   m_ObjectHideFlags: 0

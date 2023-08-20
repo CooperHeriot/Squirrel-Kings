@@ -178,7 +178,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7161919966202188145}
   - component: {fileID: 7161919966202188144}
-  - component: {fileID: 2636115567618298779}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -220,17 +219,6 @@ MonoBehaviour:
   raise: -6
   sart: {x: 0, y: 0, z: 0}
   fin: {x: 0, y: 0, z: 0}
---- !u!210 &2636115567618298779
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7161919966202188147}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!1 &7161919966295586082
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +232,6 @@ GameObject:
   - component: {fileID: 7161919966295586086}
   - component: {fileID: 7161919966295586081}
   - component: {fileID: 7161919966295586080}
-  - component: {fileID: 7161919966448675780}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -260,7 +247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7161919966295586082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27, y: -14.47, z: 0}
+  m_LocalPosition: {x: -3.3881, y: -4.91, z: 0}
   m_LocalScale: {x: 2.2070057, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -347,17 +334,6 @@ MonoBehaviour:
   dr: {fileID: 7161919966202188144}
   model: {fileID: 7161919966629945443}
   lower: 0.5
---- !u!210 &7161919966448675780
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7161919966295586082}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!1 &7161919966629945443
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,9 +444,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7161919967076950670}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.81, y: -8.01, z: 0}
-  m_LocalScale: {x: 1, y: 4.457789, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.17, y: -2.3969622, z: 0}
+  m_LocalScale: {x: 1, y: 5.576, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7161919967871490810}
