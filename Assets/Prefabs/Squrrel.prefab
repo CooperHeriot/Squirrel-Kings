@@ -5350,6 +5350,7 @@ GameObject:
   - component: {fileID: 9089793851743094512}
   - component: {fileID: 4559839564815115910}
   - component: {fileID: 5582129076717113970}
+  - component: {fileID: -7849085474604232514}
   m_Layer: 8
   m_Name: Squrrel
   m_TagString: Untagged
@@ -10274,3 +10275,14 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!210 &-7849085474604232514
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9089793851743094517}
+  m_Enabled: 1
+  m_SortingLayerID: -1538874831
+  m_SortingLayer: 1
+  m_SortingOrder: 2
