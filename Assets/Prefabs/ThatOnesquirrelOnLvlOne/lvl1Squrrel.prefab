@@ -5335,6 +5335,9 @@ MonoBehaviour:
   guts: {fileID: 4214414169575226919, guid: c4c743bec005dc64fbc45ea28792cf32, type: 3}
   tracker: {fileID: 1364821312222274133, guid: ded5bf38d0991124a93d34a8e8511f42, type: 3}
   t2: {fileID: 0}
+  slip: {fileID: 13400000, guid: 1394ff06d9dfd834189cf059190923c1, type: 2}
+  stik: {fileID: 13400000, guid: 1ab4277805f535a41838583a9c0e45c1, type: 2}
+  col: {fileID: 0}
   sprites: {fileID: 7938592594789631604}
   idle: {fileID: 3054241845679753329}
   run: {fileID: 3499065648142651236}

@@ -20,6 +20,9 @@ public class SquirrelBehav : MonoBehaviour
 
     public GameObject guts, tracker, t2;
 
+    public PhysicMaterial slip, stik;
+    public Collider col;
+
     private Quaternion slopeRotation;
     // public Animator anim;
     public GameObject sprites, idle, run;
@@ -31,6 +34,8 @@ public class SquirrelBehav : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         PS = GetComponent<ParticleSystem>();
+
+        col = GetComponent<Collider>();
 
         t2 = Instantiate(tracker);
 
@@ -93,11 +98,15 @@ public class SquirrelBehav : MonoBehaviour
         {
             idleAnim();
             swit = true;
+
+            col.material = stik;
         }
         if (stopped == false && swit == true)
         {
             runAnim();
             swit = false;
+
+            col.material = slip;
         }
     }
     public void runAnim()
