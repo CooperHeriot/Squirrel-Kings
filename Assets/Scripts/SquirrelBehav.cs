@@ -28,6 +28,9 @@ public class SquirrelBehav : MonoBehaviour
     public GameObject sprites, idle, run;
     public bool swit;
     public ParticleSystem PS, AA;
+    public GameObject dusst;
+    private GameObject dst;
+    private bool duston;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,11 +43,18 @@ public class SquirrelBehav : MonoBehaviour
         t2 = Instantiate(tracker);
 
         AA.gameObject.SetActive(false);
+
+        //dusst.transform.parent = null;
+
+        dst = dusst.transform.parent.gameObject;
+        dst.transform.parent = null;
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
-    {       
+    {
+        dst.transform.position = transform.position;
         if (stopped == false && inAir == false && Time.timeScale > 0)
         {
             //rb.velocity = (transform.right * speed);
@@ -85,9 +95,10 @@ public class SquirrelBehav : MonoBehaviour
             if (inContruct == false)
             {
                 rb.useGravity = true;
+
             } else
             {
-                rb.useGravity = false;
+                rb.useGravity = false;                
             }
 
             sprites.transform.rotation = new Quaternion(sprites.transform.rotation.x, sprites.transform.rotation.y, 0,0);
@@ -107,6 +118,19 @@ public class SquirrelBehav : MonoBehaviour
             swit = false;
 
             col.material = slip;
+        }
+
+
+        if (inAir == true)
+        {
+            duston = false;
+        } else
+        {
+            if (duston == false)
+            {
+                dusst.GetComponent<ParticleSystem>().Play();
+                duston = true;
+            }
         }
     }
     public void runAnim()
