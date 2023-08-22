@@ -183,6 +183,7 @@ public class SquirrelBehav : MonoBehaviour
         {
             t2.GetComponent<SQuirrelCount>().death();
             Destroy(t2);
+            Destroy(dst);
             Destroy(gameObject);
             Instantiate(guts, transform.position, transform.rotation);
         }
