@@ -75,7 +75,11 @@ public class SquirrelBehav : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.right, out hit, 0.8f, LM))
         {
-            oneEighty();
+            if (hit.transform.tag != "hokey")
+            {
+                oneEighty();
+            }
+            
         }
 
         if (Physics.Raycast(transform.position, transform.up * -1, out hit, 1.3f, LM))

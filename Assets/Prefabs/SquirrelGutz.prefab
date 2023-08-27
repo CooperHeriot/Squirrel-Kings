@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 323910446838151855}
   m_Layer: 11
   m_Name: SquirrelChunk (2)
-  m_TagString: Untagged
+  m_TagString: hokey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4927,7 +4927,7 @@ GameObject:
   - component: {fileID: 2286503264483766239}
   m_Layer: 11
   m_Name: SquirrelChunk (1)
-  m_TagString: Untagged
+  m_TagString: hokey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9828,7 +9828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7875369906088532181}
   - component: {fileID: 3008532614214924086}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: chunk_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9912,7 +9912,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8721677350200579291}
   - component: {fileID: 8905339756334201831}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: chunk_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9995,7 +9995,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4214414169575226912}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SquirrelGutz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10030,7 +10030,7 @@ GameObject:
   - component: {fileID: 4214414170171111003}
   - component: {fileID: 4214414170171110997}
   - component: {fileID: 4214414170171110996}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: blood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14850,7 +14850,7 @@ GameObject:
   - component: {fileID: 8908462801367658127}
   m_Layer: 11
   m_Name: SquirrelChunk
-  m_TagString: Untagged
+  m_TagString: hokey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19755,7 +19755,7 @@ GameObject:
   - component: {fileID: 4214414170641504714}
   - component: {fileID: 4214414170641504713}
   - component: {fileID: 4214414170641504712}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SquirrelBlast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19866,7 +19866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6285624831534163175}
   - component: {fileID: 7574143739750549127}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: chunk_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
