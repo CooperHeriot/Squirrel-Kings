@@ -10323,7 +10323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d3e79a6d654ca4ab4136b07cef8bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 8.2
   currentRot: 0
   stopped: 0
   inAir: 0
