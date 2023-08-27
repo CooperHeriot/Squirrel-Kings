@@ -24,6 +24,8 @@ public class Cursor : MonoBehaviour
     private bool got;
 
     private bool noBubl, mBuble;
+
+    public AudioSource place, del;
     // Start is called before the first frame update
     void Start()
     {
@@ -146,6 +148,8 @@ public class Cursor : MonoBehaviour
                 moveObj = null;
                 Carrying = false;
                 mBuble = true;
+
+                place.Play();
             }
             if (Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
             {
@@ -153,6 +157,8 @@ public class Cursor : MonoBehaviour
                 moveObj = null;
                 Carrying = false;
                 mBuble = true;
+
+                del.Play();
             }
         }
 
