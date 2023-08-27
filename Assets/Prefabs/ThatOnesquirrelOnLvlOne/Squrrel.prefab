@@ -5242,7 +5242,7 @@ MonoBehaviour:
   tracker: {fileID: 1364821312222274133, guid: ded5bf38d0991124a93d34a8e8511f42, type: 3}
   t2: {fileID: 0}
   slip: {fileID: 13400000, guid: 1394ff06d9dfd834189cf059190923c1, type: 2}
-  stik: {fileID: 13400000, guid: 1ab4277805f535a41838583a9c0e45c1, type: 2}
+  stik: {fileID: 13400000, guid: 1394ff06d9dfd834189cf059190923c1, type: 2}
   col: {fileID: 0}
   sprites: {fileID: 4533801440716043831}
   idle: {fileID: 8836659791025879090}

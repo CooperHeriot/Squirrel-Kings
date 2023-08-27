@@ -13,6 +13,8 @@ public class ConstructBehav : MonoBehaviour
     private SphereCollider SC;
     private MeshRenderer MR;
 
+    public GameObject bubl;
+
     public float force;
     //public GameObject[] squirls;
     public List<GameObject> squirls = new List<GameObject>();
@@ -78,6 +80,7 @@ public class ConstructBehav : MonoBehaviour
 
             SC.enabled = false;
             MR.enabled = false;
+            bubl.SetActive(false);
         }
     }
 
